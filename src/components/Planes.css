@@ -1,0 +1,14 @@
+.Planes-root{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Planes-title{
+    font-weight: 200;
+}
+.Planes-noOfPlanes{
+    font-weight: 600; 
+    font-size: 2rem; 
+    margin: 0.7rem 0;
+}

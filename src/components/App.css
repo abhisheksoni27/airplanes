@@ -1,0 +1,6 @@
+.App {
+  height: 100%;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 30% auto;
+}
