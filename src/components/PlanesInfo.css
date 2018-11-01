@@ -1,11 +1,20 @@
-.PlanesInfo-root{
-    display: flex;
-    justify-content: center;
+.PlanesInfo-root {
+    display: grid;
+    grid-template-rows: 15% auto;
 }
 
 .PlanesInfo-header {
-    flex-grow:1;
+    flex-grow: 1;
     display: grid;
-    padding:1em;
+    padding: 1em;
+    color:#777;
     grid-template-columns: 80% 10% 10%;
+}
+
+.PlanesInfo-row {
+    display: grid;
+    padding: 1em;
+    grid-template-columns: 80% 10% 10%;
+    background: white;
+    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.1);
 }

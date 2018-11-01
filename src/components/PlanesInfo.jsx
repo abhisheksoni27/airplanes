@@ -10,12 +10,24 @@ const Header = (
 );
 
 class PlanesInfo extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
   render() {
-    return <div className="PlanesInfo-root">{Header}</div>;
+    return (
+      <div className="PlanesInfo-root">
+        {Header}
+        <div className="PlanesInfo-">
+          {this.props.planes &&
+            this.props.planes.map((plane, idx) => {
+              return (
+                <div className="PlanesInfo-row">
+                  <p>{plane.callSign}</p>
+                  <p>{plane.speed}</p>
+                  <p>{plane.altitude}</p>
+                </div>
+              );
+            })}
+        </div>
+      </div>
+    );
   }
 }
 

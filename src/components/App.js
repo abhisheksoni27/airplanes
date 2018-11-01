@@ -14,7 +14,7 @@ class App extends Component {
     return (
       <div className="App">
         <Planes noOfPlanes={this.state.noOfPlanes}/>
-        <PlanesInfo/>
+        <PlanesInfo planes={[{callSign:"IGO", speed:456, altitude: 33}]}/>
       </div>
     );
   }
