@@ -2,5 +2,11 @@
   height: 100%;
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: 30% auto;
+  grid-template-rows: 10% 30% auto;
+}
+
+.header{
+  background: #00BCD4;
+  color:white;
+  font-weight: 600;
 }

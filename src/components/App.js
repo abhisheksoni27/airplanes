@@ -59,16 +59,19 @@ class App extends Component {
   }
 
   render() {
-    return ( <
-      div className = "App" >
-      <
-      Planes noOfPlanes = {
+    return ( 
+    <div className = "App" >
+    <div className="header">
+      <p style={{textAlign:"center"}}>Airplanes</p>
+    </div> 
+      <Planes noOfPlanes = {
         this.state.noOfPlanes
-      }
-      />{" "}  <PlanesInfo planes = {
+      }/>
+      <PlanesInfo planes = {
       this.state.planes
     }
-    />{" "} </div >
+    /> 
+    </div >
   );
 }
 }
