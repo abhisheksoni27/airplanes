@@ -3,14 +3,34 @@
   "name": "Airplanes",
   "icons": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "src": "icons/airplanes16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/airplanes24.png",
+      "sizes": "24x24",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/airplanes32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/airplanes64.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/airplanes144.png",
+      "sizes": "144x144",
+      "type": "image/png"
     }
   ],
   "start_url": ".",
   "orientation": "portrait",
-  "display": "standalone",
+  "display":"standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"
 }
