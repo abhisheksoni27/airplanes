@@ -1,6 +1,6 @@
 .PlanesInfo-root {
     display: grid;
-    grid-template-rows: 15% auto;
+    grid-template-rows: 7rem auto;
 }
 
 .PlanesInfo-header {
