@@ -49,7 +49,7 @@ class App extends Component {
       .then(res => res.json())
       .then(resJson => {
         this.setState({
-          noOfPlanes: resJson.states && resJson.states.length,
+          noOfPlanes: (resJson.states && resJson.states.length) || 0,
           planes: resJson.states
         });
       });
