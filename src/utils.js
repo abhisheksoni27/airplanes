@@ -60,3 +60,10 @@ export const getBoundingBox = (location, prevLocation, prevBoundingBox) => {
     }
 
 }
+
+export const sendNotification = (totalPlanes) => {
+    navigator.serviceWorker.ready.then(function (registration) {
+        registration.showNotification(`There are currently ${totalPlanes} planes flying around you.`);
+
+    });
+}

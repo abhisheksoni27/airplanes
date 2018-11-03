@@ -7,7 +7,8 @@ import PlanesInfo from "./PlanesInfo";
 
 import {
   getCurrentLocation,
-  getBoundingBox
+  getBoundingBox,
+  sendNotification
 } from "../utils";
 const REFRESH_INTERVAL = 15 * 1000;
 let API_URL = "https://opensky-network.org/api/states/all?";
@@ -49,7 +50,10 @@ class App extends Component {
         this.setState({
           noOfPlanes: resJson.states.length,
           planes: resJson.states
-        })
+        }, () => {
+          sendNotification(this.state.noOfPlanes);
+        });
+
       })
   }
 
@@ -59,21 +63,33 @@ class App extends Component {
   }
 
   render() {
-    return ( 
-    <div className = "App" >
-    <div className="header">
-      <p style={{textAlign:"center"}}>Air<span style={{fontWeight:100}}>planes</span></p>
-    </div> 
-      <Planes noOfPlanes = {
+    return ( <
+      div className = "App" >
+      <
+      div className = "header" >
+      <
+      p style = {
+        {
+          textAlign: "center"
+        }
+      } > Air < span style = {
+        {
+          fontWeight: 100
+        }
+      } > planes < /span></p >
+      <
+      /div>  <
+      Planes noOfPlanes = {
         this.state.noOfPlanes
-      }/>
-      <PlanesInfo planes = {
-      this.state.planes
-    }
-    /> 
-    </div >
-  );
-}
+      }
+      /> <
+      PlanesInfo planes = {
+        this.state.planes
+      }
+      />  <
+      /div >
+    );
+  }
 }
 
 export default App;
