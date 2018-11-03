@@ -1,5 +1,5 @@
 const R = 6371; // earth radius in km
-const radius = 100; // km
+const radius = 10; // km
 
 export const getCurrentLocation = (prevLocation) => {
     return new Promise((resolve, reject) => {
