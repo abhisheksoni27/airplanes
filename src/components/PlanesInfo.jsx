@@ -5,7 +5,7 @@ const Header = (
   <div className="PlanesInfo-header">
     <p>CallSign</p>
     <p>Country</p>
-    <p>Speed (km/hr)</p>
+    <p>Speed &nbsp; (km/hr)</p>
     <p>Altitude (ft)</p>
   </div>
 );

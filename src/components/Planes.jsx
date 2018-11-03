@@ -10,7 +10,7 @@ class Planes extends Component {
       <div className="Planes-root">
         <div className="Planes-container">
           <h4 className="Planes-noOfPlanes">{this.props.noOfPlanes}</h4>
-          <span className="Planes-title">Planes</span>
+          <span className="Planes-title">Planes within 10 km</span>
         </div>
       </div>
     );

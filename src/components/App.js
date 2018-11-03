@@ -62,7 +62,7 @@ class App extends Component {
     return ( 
     <div className = "App" >
     <div className="header">
-      <p style={{textAlign:"center"}}>Airplanes</p>
+      <p style={{textAlign:"center"}}>Air<span style={{fontWeight:100}}>planes</span></p>
     </div> 
       <Planes noOfPlanes = {
         this.state.noOfPlanes
