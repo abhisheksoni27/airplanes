@@ -48,7 +48,7 @@ class App extends Component {
       .then(res => res.json())
       .then(resJson => {
         this.setState({
-          noOfPlanes: resJson.states.length,
+          noOfPlanes: resJson.states && resJson.states.length,
           planes: resJson.states
         }, () => {
           sendNotification(this.state.noOfPlanes);
