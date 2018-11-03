@@ -47,49 +47,41 @@ class App extends Component {
       })
       .then(res => res.json())
       .then(resJson => {
-        this.setState({
-          noOfPlanes: resJson.states && resJson.states.length,
-          planes: resJson.states
-        }, () => {
+        if ((this.state.noOfPlanes && this.state.noOfPlanes) !== (resJson.states && resJson.states.length)) {
           sendNotification(this.state.noOfPlanes);
-        });
-
-      })
-  }
-
-  componentDidMount() {
-    this._process();
-    setInterval(this._process, REFRESH_INTERVAL);
-  }
-
-  render() {
-    return ( <
-      div className = "App" >
-      <
-      div className = "header" >
-      <
-      p style = {
-        {
-          textAlign: "center"
         }
-      } > Air < span style = {
-        {
-          fontWeight: 100
-        }
-      } > planes < /span></p >
-      <
-      /div>  <
-      Planes noOfPlanes = {
-        this.state.noOfPlanes
-      }
-      /> <
-      PlanesInfo planes = {
-        this.state.planes
-      }
-      />  <
-      /div >
-    );
-  }
-}
 
-export default App;
+          this.setState({
+              noOfPlanes: resJson.states && resJson.states.length,
+              planes: resJson.states
+            })
+      });}
+
+    componentDidMount() {
+      this._process();
+      setInterval(this._process, REFRESH_INTERVAL);
+    }
+
+    render() {
+      return ( <div className = "App" >
+        <div className = "header" >
+        <p style = {
+          {
+            textAlign: "center"
+          }
+        } > Air < span style = {
+          {
+            fontWeight: 100
+          }
+        }> planes </span></p >
+        </div>  <Planes noOfPlanes = {
+          this.state.noOfPlanes
+        }/> <PlanesInfo planes = {
+          this.state.planes
+        }
+        />  </div >
+      );
+    }
+  }
+
+  export default App;
